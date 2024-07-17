@@ -14,8 +14,8 @@ const Leaderboard: React.FC = () => {
     bannerImage,
     imageImage,
   ];
-  useEffect(() => {
 
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 2000);
@@ -28,26 +28,24 @@ const Leaderboard: React.FC = () => {
       <div className="leaderboard-container">
         <h1 className="leaderboard-title">Add your daily score on leaderboard</h1>
         <div className='userdata'>
-        <h1 className='usehead'>UserName</h1>
-        <h1 className='useScore'>Score</h1>
+          <h1 className='usehead'>UserName</h1>
+          <h1 className='useScore'>Score</h1>
         </div>
         <div className="leaderboard">
           <ul>
             {scores.map((score, index) => (
-              <ScoreItem key={index} serialNumber={index + 1} score={score} /> 
+              <ScoreItem key={index} serialNumber={index + 1} score={score} />
             ))}
           </ul>
         </div>
       </div>
       <div className="footer-container">
-        <div className="card" >
+        <div className="card">
           <img
             className="card-image"
             src={images[currentImageIndex]}
-            
-            alt="Description of the image"
+            alt="Rotating banner or image" 
           />
-          
         </div>
       </div>
     </div>
