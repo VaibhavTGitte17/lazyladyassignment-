@@ -21,7 +21,7 @@ const Leaderboard: React.FC = () => {
     }, 2000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className="page-container">
@@ -44,8 +44,8 @@ const Leaderboard: React.FC = () => {
           <img
             className="card-image"
             src={images[currentImageIndex]}
-            alt={`Footer Image ${currentImageIndex + 1}`}
             
+            alt="Description of the image"
           />
           
         </div>
