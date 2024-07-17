@@ -3,26 +3,12 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import ScoreItem from './ScoreItem';
 import bannerImage from '../assets/banner.png'; // Import images directly
-import imageImage from '../assets/image.png';
+
 import '../styles/Leaderboard.css';
 
 const Leaderboard: React.FC = () => {
   const scores = useSelector((state: RootState) => state.leaderboard.scores);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const images = [
-    bannerImage,
-    imageImage,
-  ];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
-
-    return () => clearInterval(intervalId);
-  }, [images.length]);
-
+  
   return (
     <div className="page-container">
       <div className="leaderboard-container">
@@ -43,8 +29,8 @@ const Leaderboard: React.FC = () => {
         <div className="card">
           <img
             className="card-image"
-            src={images[currentImageIndex]}
-            alt="Rotating banner or image" // Updated alt text
+            src={bannerImage}
+            alt="Rotating banner or image" 
           />
         </div>
       </div>
