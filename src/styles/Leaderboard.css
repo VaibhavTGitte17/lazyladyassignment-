@@ -1,0 +1,48 @@
+/* Leaderboard.css */
+
+.leaderboard {
+  background-image: url('../assets/image.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.leaderboard h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.leaderboard-name-header,
+.leaderboard-score-header {
+  flex: 1;
+  text-align: center;
+}
+
+.leaderboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.score-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.score-name,
+.score-points {
+  flex: 1;
+  text-align: center;
+}
