@@ -44,7 +44,7 @@ const Leaderboard: React.FC = () => {
           <img
             className="card-image"
             src={images[currentImageIndex]}
-            alt="Rotating banner or image" 
+            alt="Rotating banner or image" // Updated alt text
           />
         </div>
       </div>
