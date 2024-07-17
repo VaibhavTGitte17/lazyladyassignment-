@@ -20,7 +20,7 @@ const leaderboardSlice = createSlice({
     addScore: (state, action: PayloadAction<Score>) => {
       state.scores.push(action.payload);
       state.scores.sort((a, b) => a.score.localeCompare(b.score));
-      state.scores = state.scores.slice(0, 10);
+      state.scores = state.scores.slice(0, 100);
     },
   },
 });

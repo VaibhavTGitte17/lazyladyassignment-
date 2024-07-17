@@ -16,7 +16,7 @@ const AddScorePopup: React.FC = () => {
 
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
+      <Button variant="contained" color="primary" onClick={() => setOpen(true)} style={{width:'900px'}}>
         Add Score
       </Button>
       <Dialog open={open} onClose={() => setOpen(false)}>

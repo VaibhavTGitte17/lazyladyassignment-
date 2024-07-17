@@ -4,14 +4,30 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  transition: background-color 0.3s ease; 
+}
+
+.score-item:nth-child(even) {
+  background-color: #db6e21; 
+}
+
+.score-item:nth-child(odd) {
+  background-color: #2580cf; 
+}
+
+.score-item:hover {
+  background-color: #df1234; 
 }
 
 .score-item .username {
   flex: 1;
   text-align: left;
+  color: white;
 }
 
 .score-item .score {
   text-align: right;
+  color: white;
 }
